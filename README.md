@@ -10,13 +10,13 @@ in Videos from Left-and Right-Wing YouTube News Channels.” In Proceedings of t
 ## Install
 请确保您有以下包，若没有也可输入以下进行安装
 `
-pip install pandas \<br>
-pip install jieba \<br>
-pip install numpy \<br>
-pip install csv \<br>
-pip install matplotlib \<br>
-pip install sklearn \<br>
-pip install math \<br>
+pip install pandas  
+pip install jieba  
+pip install numpy  
+pip install csv  
+pip install matplotlib  
+pip install sklearn  
+pip install math  
 `
 
 
