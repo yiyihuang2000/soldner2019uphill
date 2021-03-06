@@ -5,15 +5,15 @@ Created on Tue Mar  2 19:25:54 2021
 @author: 黄一一
 """
 import pandas as pd
-from snownlp import SnowNLP
 import jieba
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.cluster import KMeans
-bins=25
-cluster=4
+
+bins=25#序列数量
+cluster=4#聚类cluster的数量
 
 #读取数据
 data=pd.read_csv("sentiment_score.csv",encoding='utf-8')
@@ -53,10 +53,14 @@ low=mean-std
 high=mean+std
 #画图
 col=[x for x in range(1,bins+1)]
+if cluster%2==0:
+    row=cluster/2
+else:
+    row=cluster/2+1
 for i in range(cluster):
-    plt.subplot(2,2,(i+1))
+    plt.subplot(row,2,(i+1))
     plt.plot([0,bins],[0,0])#画0的水平线
-    plt.plot(col,mean.iloc[i,:])
+    plt.plot(col,mean.iloc[i,:],"b")
     plt.plot(col,low.iloc[i,:],"r")
     plt.plot(col,high.iloc[i,:],"r")
     plt.xticks(range(0,bins+1,5))
