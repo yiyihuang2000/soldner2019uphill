@@ -13,13 +13,13 @@ import numpy as np
 from numpy import array as matrix, arange,zeros,transpose,matmul,ones,multiply
 import math
 
-cluster_lower_ = 2
+cluster_lower_ = 2#取前两个词和后两个词一起组成这个词的cluster
 cluster_upper_ = 2
-bins=25
-stopwords = set()
-sen_dict = {}
-degree_dic = defaultdict()
-not_word_list=[]
+bins=25#序列数量
+stopwords = set()#停用词集合
+sen_dict = {}#情感词字典
+degree_dic = defaultdict()#程度词字典
+not_word_list=[]#否定词字典
 
 '''获取词典'''
 def init():
@@ -166,7 +166,7 @@ def sentiment_score(sententce):
 
 
 '''主程序'''
-data=pd.read_csv(r"china-japan.csv",encoding='utf-8')
+data=pd.read_csv("china-japan.csv",encoding='utf-8')
 col=[x for x in range(1,bins+1)]
 data=pd.concat([data, pd.DataFrame(columns=col)])#增加bins列，分割原文本
 init()#构建字典
