@@ -8,7 +8,7 @@ in Videos from Left-and Right-Wing YouTube News Channels.” In Proceedings of t
 
 
 ## Install
-请确保您有以下包，若没有也可输入以下进行安装
+    请确保您有以下包，若没有也可输入以下进行安装
     pip install pandas  
     pip install jieba  
     pip install numpy  
