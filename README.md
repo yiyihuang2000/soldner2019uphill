@@ -1,11 +1,12 @@
 # soldner2019uphill
-an attempt to implement the algorithm mentioned in the paper
 
 Project
 ====
 基于论文Soldner, Felix, Justin Chun-ting Ho, Mykola Makhortykh, Isabelle WJ van der Vegt,Maximilian Mozes, and Bennett Kleinberg. 2019. “Uphill from Here: Sentiment Patterns 
 in Videos from Left-and Right-Wing YouTube News Channels.” In Proceedings of the Third Workshop on Natural Language Processing and Computational Social Science, 84–93. 的复现尝试。
 先将输入句子按照长度分成等分的时间序列，再分别计算序列特征的情感值，对其进行kmeans聚类，进行轨迹分析。
+
+
 
 Install
 ====
@@ -20,11 +21,15 @@ pip install sklearn
 pip install math
 '''
 
+
+
 Usage
 ====
 1. 请下载整个项目，将dict文件夹解压缩
 2. 打开score_sentiment.py进行china-japan.csv文件的情感值计算，得到sentiment_score.csv
 3. 打开kmeans.py进行聚类，并得到聚类结果图
+
+
 
 Problems
 ====
